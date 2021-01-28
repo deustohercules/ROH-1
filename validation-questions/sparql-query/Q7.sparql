@@ -14,7 +14,7 @@ PREFIX iao: <http://purl.org/roh/mirror/obo/iao#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
 SELECT
-(COUNT(DISTINCT ?publication) as ?publicationCount) ?comunidadAutonoma
+(COUNT(DISTINCT ?publication) as ?publicationCount) ?location
 WHERE {
   ?publication         a iao:IAO_0000013 ;
                        vivo:hasPublicationVenue        ?journal ;
@@ -27,8 +27,5 @@ WHERE {
   ?position roh:positionOf ?author ;
             vivo:relates ?organization .
   ?organization	gn:locatedIn        ?location .
-  SERVICE ?location {
-  	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
-  }
 } 
-GROUP BY ?comunidadAutonoma
+GROUP BY ?location
