@@ -1,4 +1,3 @@
-# En esta consulta hay que comprobar que funciona la parte de consultar a Geonames, ya que en Fuseki no funcionan las querys federadas
 
 PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
 PREFIX roh: <http://purl.org/roh#>
