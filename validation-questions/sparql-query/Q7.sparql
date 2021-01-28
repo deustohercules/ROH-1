@@ -22,7 +22,7 @@ WHERE {
                        bibo:authorList        ?authorList ;
  				 	   vivo:dateIssued        ?dateTimeValue .
   ?journal	a bibo:Journal        .
-  ?authorList	rdfs:member        ?author .
+  ?authorList	?member        ?author .
   ?dateTimeValue	vivo:dateTime        ?dateTime .
   ?author	a        foaf:Person .
   ?position roh:positionOf ?author ;
